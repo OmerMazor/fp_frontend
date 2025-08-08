@@ -9,7 +9,7 @@ export default function PredictionsPage() {
 
     useEffect(() => {
         axios
-            .get("https://fp-backend-um6v.onrender.com/api/predictions")
+            .get("http://localhost:5000/api/predictions")
             .then((response) => {
                 setPredictions(response.data);
             })
@@ -30,7 +30,7 @@ export default function PredictionsPage() {
         <div className="container">
 
             <h2 className="title">Prediction History</h2>
-            <label style={{ fontWeight: "bold" }}>Filter by Date:</label>
+            <label style={{ fontWeight: "bold" }}>Filter by Date (28/1/2025 - 06/05/2025):</label>
             <input
                 type="date"
                 value={selectedDate}
