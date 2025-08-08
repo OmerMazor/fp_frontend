@@ -190,7 +190,7 @@ function HomePage() {
   }, []);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/models")
+    axios.get("https://fp-backend-h03t.onrender.com/api/models")
       .then(res => {
 
         setModels(res.data.models);
