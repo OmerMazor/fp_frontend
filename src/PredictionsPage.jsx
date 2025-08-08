@@ -9,7 +9,7 @@ export default function PredictionsPage() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:5000/api/predictions")
+            .get("https://fp-backend-h03t.onrender.com/api/predictions")
             .then((response) => {
                 setPredictions(response.data);
             })
