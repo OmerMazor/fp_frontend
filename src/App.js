@@ -184,7 +184,7 @@ function HomePage() {
 
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/accuracy")
+    axios.get("https://fp-backend-h03t.onrender.com/api/accuracy")
       .then(res => setAccuracy(res.data.accuracy))
       .catch(err => console.error("Failed to fetch accuracy", err));
   }, []);
@@ -203,7 +203,7 @@ function HomePage() {
     setLoading(true);
     setResult("");
     axios
-      .post("http://localhost:5000/api/teams", {
+      .post("https://fp-backend-h03t.onrender.com/api/teams", {
         homeTeam,
         awayTeam,
         homeMarketValue,
